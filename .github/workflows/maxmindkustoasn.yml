@@ -9,7 +9,7 @@ on:
   #  branches: [ main ]
   #pull_request:
   #  branches: [ main ]
-  schedule:
+  #schedule:
   #- cron: "55 02 * * *"
 
   # Allows you to run this workflow manually from the Actions tab
