@@ -31,5 +31,5 @@ jobs:
       - uses: actions/checkout@v4
 
       # Downloads the source data
-      - name: Run 0.1 - File System Preparation
-        run: sh ./scripts/0.1-filesystemprep.sh
+      - name: Run Generate Kusto Maxmind ASN
+        run: sh generatekustomaxmind.sh
