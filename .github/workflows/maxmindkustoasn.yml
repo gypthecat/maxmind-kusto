@@ -32,4 +32,4 @@ jobs:
 
       # Downloads the source data
       - name: Run Generate Kusto Maxmind ASN
-        run: sh generatekustomaxmind.sh
+        run: sh generatekustomaxmind.sh $MAXMINDKEY
