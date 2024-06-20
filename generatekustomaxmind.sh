@@ -53,6 +53,8 @@ SELECT CIDR, CIDRASN, CIDRASNName, "GeoLite2 by MaxMind" as CIDRSource FROM CIDR
 zip -9 -j kusto-cidr-asn.csv.zip kusto-cidr-asn.csv
 zip -9 -j kusto-cidr-asn-ipv6.csv.zip kusto-cidr-asn-ipv6.csv
 
+pip install pandas
+
 python3 generateparquet.py
 
 ls -lha
