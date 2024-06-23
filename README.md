@@ -43,4 +43,4 @@ CIDRASN
 | order by TotalIPs desc
 ```
 # About Me
-#MicrosoftEmployee yet all code regardless of quality and suitability is entirely on me, comments and verbiage entirely my own.
+#MicrosoftEmployee yet all code regardless of quality and suitability is entirely on me, comments and verbiage entirely my own as a personal pet project.
