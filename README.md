@@ -29,7 +29,16 @@ This dataset is simultaneously hosted on https://firewalliplists.gypthecat.com.
 externaldata (CIDR:string, CIDRASN:int, CIDRASNName:string, CIDRSource:string) ['https://github.com/gypthecat/shiny-adventure/releases/download/Test01/kusto-cidr-asn.csv.zip'] with (ignoreFirstRecord=true)
 ```
 
-## Base Kusto Function
+# Base Kusto Function
 ```
-let CIDRASN = (externaldata (CIDR:string, CIDRASN:int, CIDRASNName:string, CIDRSource:string) ['https://firewalliplists.gypthecat.com/lists/kusto/kusto-cidr-asn.csv.zip'] with (ignoreFirstRecord=true));
+let CIDRASN = (externaldata (CIDR:string, CIDRASN:int, CIDRASNName:string, CIDRSource:string) ['https://github.com/gypthecat/shiny-adventure/releases/download/Test01/kusto-cidr-asn.csv.zip'] with (ignoreFirstRecord=true));
+```
+# Self Contained Kusto Example
+```
+// Which ASN Owners have the most IP address?
+let CIDRASN = (externaldata (CIDR:string, CIDRASN:int, CIDRASNName:string, CIDRSource:string) ['https://github.com/gypthecat/shiny-adventure/releases/download/Test01/kusto-cidr-asn.csv.zip'] with (ignoreFirstRecord=true));
+CIDRASN
+| extend NumberOfIPs = pow(2, 32 - toint(split(CIDR, '/')[-1]))
+| summarize TotalIPs = sum(NumberOfIPs) by CIDRASN, CIDRASNName
+| order by TotalIPs desc
 ```
