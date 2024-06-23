@@ -42,3 +42,5 @@ CIDRASN
 | summarize TotalIPs = sum(NumberOfIPs) by CIDRASN, CIDRASNName
 | order by TotalIPs desc
 ```
+# About Me
+#MicrosoftEmployee yet all code regardless of quality and suitability is entirely on me, comments and verbiage entirely my own.
