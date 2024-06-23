@@ -18,6 +18,10 @@ Allows the ability to track IP addresses across service providers as well as inv
 ---
 [https://github.com/gypthecat/shiny-adventure/releases/download/Test01/kusto-cidr-asn.csv.zip](https://github.com/gypthecat/shiny-adventure/releases/download/Test01/kusto-cidr-asn.csv.zip)
 
+# History
+---
+This dataset is simultaneously hosted on https://firewalliplists.gypthecat.com.
+
 # Schema
 | Column Name | Data Type | Notes |
 | ----------- | --------- | ----- |
