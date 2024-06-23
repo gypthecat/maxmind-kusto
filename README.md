@@ -1,6 +1,6 @@
 # Description
 ---
-This project takes ASN IP data from Maxmind and formats it in a way that is useful and appropiate for Microsoft KQL applications.  Technologies include Microsoft Defender for Endpoing, Sentinel, Azure Monitor, Azure Log Analytics and Azure Data Explorer.
+This project takes ASN IP data from Maxmind and formats it in a way that is useful and appropiate for Microsoft KQL applications.  Appropiate products include Microsoft Defender for Endpoing, Sentinel, Azure Monitor, Azure Log Analytics and Azure Data Explorer.
 
 # License
 ---
