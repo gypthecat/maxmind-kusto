@@ -33,3 +33,9 @@ jobs:
       # Downloads the source data
       - name: Run Generate Kusto Maxmind ASN
         run: sh generatekustomaxmind.sh $MAXMINDKEY
+      
+      # Uploads the artifacts
+      - uses: actions/upload-artifacts@v3
+        with:
+          name: artifacts
+          path: artifacts/
