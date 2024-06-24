@@ -1,3 +1,8 @@
+#!/bin/bash
+
+# Prepare directory for staging
+mkdir -p artifacts
+
 # Download from Maxmind
 wget "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-ASN-CSV&license_key=$1&suffix=zip" --output-document=GeoLite2-ASN.zip --no-check-certificate
 
@@ -57,8 +62,8 @@ SELECT CIDR, CIDRASN, CIDRASNName, "GeoLite2 by MaxMind" as CIDRSource FROM CIDR
 ' | sqlite3 temp.db
 
 # Compress the files
-zip -9 -j kusto-cidr-asn.csv.zip kusto-cidr-asn.csv
-zip -9 -j kusto-cidr-asn-ipv6.csv.zip kusto-cidr-asn-ipv6.csv
+zip -9 -j artifacts/kusto-cidr-asn.csv.zip kusto-cidr-asn.csv
+zip -9 -j artifacts/kusto-cidr-asn-ipv6.csv.zip kusto-cidr-asn-ipv6.csv
 
 # Necessary Python packages
 pip install pandas fastparquet pyarrow
