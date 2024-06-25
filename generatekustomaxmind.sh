@@ -70,11 +70,10 @@ pip install pandas fastparquet pyarrow
 
 # Generate Parquet files
 #python3 generateparquet.py
-cd artifacts
 for $files in *.csv;
   do python3 converttoparquet.py $files;
 done
-cd ..
+mv *.parquet artifacts/
 
 # Sanity check contents
 ls -lha
