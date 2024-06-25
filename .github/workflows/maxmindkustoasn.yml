@@ -42,10 +42,10 @@ jobs:
           path: artifacts/
 
       # Create release
-      - name: Create Github release
-        id: create-new-release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
+      #- name: Create Github release
+        #id: create-new-release
+        #uses: actions/create-release@v1
+        #env:
+          #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        #with:
           
