@@ -11,7 +11,7 @@ This product includes GeoLite2 data created by MaxMind, available from [https://
 Allows the ability to track IP addresses across service providers as well as investigate the whole address space for specific details.
 
 # Perma Link
-[https://github.com/gypthecat/shiny-adventure/releases/download/Test01/kusto-cidr-asn.csv.zip](https://github.com/gypthecat/shiny-adventure/releases/download/Test01/kusto-cidr-asn.csv.zip)
+[https://github.com/gypthecat/maxmind-kusto/releases/download/daily-run/kusto-cidr-asn.csv.zip](https://github.com/gypthecat/maxmind-kusto/releases/download/daily-run/kusto-cidr-asn.csv.zip)
 
 # History
 This dataset is simultaneously hosted on https://firewalliplists.gypthecat.com.
@@ -26,17 +26,17 @@ This dataset is simultaneously hosted on https://firewalliplists.gypthecat.com.
 
 # Base Kusto Table
 ```
-externaldata (CIDR:string, CIDRASN:int, CIDRASNName:string, CIDRSource:string) ['https://github.com/gypthecat/shiny-adventure/releases/download/Test01/kusto-cidr-asn.csv.zip'] with (ignoreFirstRecord=true)
+externaldata (CIDR:string, CIDRASN:int, CIDRASNName:string, CIDRSource:string) ['https://github.com/gypthecat/maxmind-kusto/releases/download/daily-run/kusto-cidr-asn.csv.zip'] with (ignoreFirstRecord=true)
 ```
 
 # Base Kusto Function
 ```
-let CIDRASN = (externaldata (CIDR:string, CIDRASN:int, CIDRASNName:string, CIDRSource:string) ['https://github.com/gypthecat/shiny-adventure/releases/download/Test01/kusto-cidr-asn.csv.zip'] with (ignoreFirstRecord=true));
+let CIDRASN = (externaldata (CIDR:string, CIDRASN:int, CIDRASNName:string, CIDRSource:string) ['https://github.com/gypthecat/maxmind-kusto/releases/download/daily-run/kusto-cidr-asn.csv.zip'] with (ignoreFirstRecord=true));
 ```
 # Self Contained Kusto Example
 ```
 // Which ASN Owners have the most IP address?
-let CIDRASN = (externaldata (CIDR:string, CIDRASN:int, CIDRASNName:string, CIDRSource:string) ['https://github.com/gypthecat/shiny-adventure/releases/download/Test01/kusto-cidr-asn.csv.zip'] with (ignoreFirstRecord=true));
+let CIDRASN = (externaldata (CIDR:string, CIDRASN:int, CIDRASNName:string, CIDRSource:string) ['https://github.com/gypthecat/maxmind-kusto/releases/download/daily-run/kusto-cidr-asn.csv.zip'] with (ignoreFirstRecord=true));
 CIDRASN
 | extend NumberOfIPs = pow(2, 32 - toint(split(CIDR, '/')[-1]))
 | summarize TotalIPs = sum(NumberOfIPs) by CIDRASN, CIDRASNName
