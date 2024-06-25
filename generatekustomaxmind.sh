@@ -70,9 +70,10 @@ pip install pandas fastparquet pyarrow
 
 # Generate Parquet files
 #python3 generateparquet.py
-for files in *.csv;
+for files in kusto*.csv;
   do python3 converttoparquet.py $files;
 done
+
 mv *.parquet artifacts/
 
 # Sanity check contents
