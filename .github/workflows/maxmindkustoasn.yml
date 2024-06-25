@@ -35,7 +35,17 @@ jobs:
         run: sh generatekustomaxmind.sh $MAXMINDKEY
       
       # Uploads the artifacts
+      - name: Upload the artifacts to staging
       - uses: actions/upload-artifact@v4
         with:
           name: artifacts
           path: artifacts/
+
+      # Create release
+      - name: Create Github release
+        id: create-new-release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          
