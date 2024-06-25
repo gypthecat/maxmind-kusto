@@ -22,7 +22,7 @@ This dataset is simultaneously hosted on https://firewalliplists.gypthecat.com.
 | CIDR | string  | |
 | CIDRASN | int  | |  
 | CIDRASNName | string  | |  
-| CIDRSource | string  | Always Maxmind |  
+| CIDRSource | string  | Always MaxMind |  
 
 # Base Kusto Table
 ```
