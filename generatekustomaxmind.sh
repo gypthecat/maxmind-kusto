@@ -69,9 +69,15 @@ zip -9 -j artifacts/kusto-cidr-asn-ipv6.csv.zip kusto-cidr-asn-ipv6.csv
 pip install pandas fastparquet pyarrow
 
 # Generate Parquet files
-python3 generateparquet.py
+#python3 generateparquet.py
+cd artifacts
+for $files in *.csv;
+  do python3 converttoparquet.py $files;
+done
+cd ..
 
 # Sanity check contents
 ls -lha
+ls -lha artifacts/
 
 # You can do something here with the files, eg upload elsewhere
