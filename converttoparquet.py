@@ -10,11 +10,15 @@ if txt.split('.')[-1] != 'csv':
         print('Error - Exiting - Not a CSV file')
         sys.exit(0)
 
-print(f'{datetime.datetime.now()} - Ok - Importing CSV')
+print(f'{datetime.datetime.now()} - Info - Importing CSV')
 
-inputfile = pandas.read_csv(sys.argv[1])
+try:
+  inputfile = pandas.read_csv(sys.argv[1])
+except:
+  print(f'{datetime.datetime.now()} - Error - Exiting - CSV import failed')
+  sys.exit(0)
 
-print(f'{datetime.datetime.now()} - Ok - Writing Parquet')
+print(f'{datetime.datetime.now()} - Info - Writing Parquet')
 
 outputfile = txt.split('.')[0] + '.parquet'
 
