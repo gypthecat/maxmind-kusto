@@ -4,8 +4,7 @@ import datetime
 
 txt = str(sys.argv[1])
 
-print(f'{datetime.datetime.now()} - Info - CSV to Parquet conversion - Starting File
-Name {txt}')
+print(f'{datetime.datetime.now()} - Info - CSV to Parquet conversion - Starting File Name {txt}')
 
 if txt.split('.')[-1] != 'csv':
         print('Error - Exiting - Not a CSV file')
