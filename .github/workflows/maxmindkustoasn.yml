@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Maxmind Kusto ASN
+name: Maxmind Kusto Generator
 
 # Controls when the workflow will run
 on:
