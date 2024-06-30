@@ -128,3 +128,5 @@ mv *.parquet artifacts/
 ls -lhaFR
 
 # You can do something here with the files, eg upload elsewhere
+# In this case updating the release on GitHub
+gh release upload --repo gypthecat/maxmind-kusto daily-run artifacts/* --clobber
