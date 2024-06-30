@@ -24,28 +24,14 @@ jobs:
     timeout-minutes: 30
     env:
       MAXMINDKEY: ${{ secrets.MAXMINDKEY }}
+      GH_TOKEN: ${{ github.token }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
-      # Downloads the source data
+      # Generate Maxmind Kusto Tables
       - name: Run Generate Kusto Maxmind ASN
         run: sh generatekustomaxmind.sh $MAXMINDKEY
-      
-      # Uploads the artifacts
-      #- name: Upload the artifacts to staging
-      #- uses: actions/upload-artifact@v4
-        #with:
-          #name: artifacts
-          #path: artifacts/
-
-      # Create release
-      #- name: Create Github release
-        #id: create-new-release
-        #uses: actions/create-release@v1
-        #env:
-          #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        #with:
           
