@@ -25,6 +25,7 @@ jobs:
     env:
       MAXMINDKEY: ${{ secrets.MAXMINDKEY }}
       GH_TOKEN: ${{ github.token }}
+    permissions: write-all
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
