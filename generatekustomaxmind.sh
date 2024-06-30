@@ -13,7 +13,7 @@ unzip GeoLite2-Geo.zip -d .
 
 # Move the files to this directory
 mv GeoLite2-ASN-CSV*/*.csv .
-mv GeoLite2-Geo-CSV*/*.csv .
+mv GeoLite2-Country-CSV*/*.csv .
 
 # Remove the top rows of the CSVs
 sed -i 1d *.csv
@@ -125,7 +125,6 @@ done
 mv *.parquet artifacts/
 
 # Sanity check contents
-ls -lha
-ls -lha artifacts/
+ls -lhaFR
 
 # You can do something here with the files, eg upload elsewhere
