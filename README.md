@@ -62,7 +62,7 @@ CIDRASN
 // Comparing inbuilt Kusto geo functions and external records what is the delta?
 // Note: This just helps clarify the difficulties in using such threat intelligence
 // Note: If CIDR blocks have been split these won't necessarily be picked up
-externaldata (CIDRCountry:string, CIDR:string, CIDRCountryName:string, CIDRContinent:string, CIDRContinentName:string, CIDRSource:string) ['https://firewalliplists.gypthecat.com/lists/kusto/kusto-cidr-countries.csv.zip'] with (ignoreFirstRecord=true)
+externaldata (CIDRCountry:string, CIDR:string, CIDRCountryName:string, CIDRContinent:string, CIDRContinentName:string, CIDRSource:string) ['https://github.com/gypthecat/maxmind-kusto/releases/download/daily-run/kusto-cidr-asn.csv.zip'] with (ignoreFirstRecord=true)
 | extend IndicativeIpAddress = tostring(split(CIDR, '/')[0])
 | extend CountryName = geo_info_from_ip_address(IndicativeIpAddress)['country']
 | where CIDRCountryName !in ('IETF', '') and CountryName !in ('') and CIDRCountryName != CountryName
