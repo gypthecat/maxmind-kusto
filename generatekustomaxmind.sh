@@ -124,6 +124,9 @@ done
 
 mv *.parquet artifacts/
 
+# Generate SHA1 values
+sha1sum artifacts/* > artifacts/hash-values.txt
+
 # Sanity check contents
 ls -lhaFR
 
