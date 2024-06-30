@@ -1,5 +1,5 @@
 # Description
-This project takes ASN and geographic IP data from MaxMind daily and formats it in a way that is useful and appropiate for Microsoft KQL/Kusto applications.  Appropiate products include Microsoft Defender for Endpoint, Microsoft Sentinel, Azure Monitor, Azure Log Analytics and Azure Data Explorer.
+This project takes ASN and geographic IP data from MaxMind daily and formats it in a way that is useful and appropiate for Microsoft KQL/Kusto applications.  It then hosts these external datatables on GitHub for public use.  Appropiate products include Microsoft Defender for Endpoint, Microsoft Sentinel, Azure Monitor, Azure Log Analytics and Azure Data Explorer.
 
 # License
 Output data and generation code is provided under [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
@@ -11,6 +11,7 @@ This product includes GeoLite2 data created by MaxMind, available from [https://
 Allows the ability to track IP addresses across service providers as well as investigate the whole address space for specific details.
 
 # Perma Link
+[https://github.com/gypthecat/maxmind-kusto/releases/tag/daily-run](https://github.com/gypthecat/maxmind-kusto/releases/tag/daily-run)
 [https://github.com/gypthecat/maxmind-kusto/releases/download/daily-run/kusto-cidr-asn.csv.zip](https://github.com/gypthecat/maxmind-kusto/releases/download/daily-run/kusto-cidr-asn.csv.zip)
 [https://github.com/gypthecat/maxmind-kusto/releases/download/daily-run/kusto-cidr-asn.parquet](https://github.com/gypthecat/maxmind-kusto/releases/download/daily-run/kusto-cidr-asn.parquet)
 [https://github.com/gypthecat/maxmind-kusto/releases/download/daily-run/kusto-cidr-asn-ipv6.csv.zip](https://github.com/gypthecat/maxmind-kusto/releases/download/daily-run/kusto-cidr-asn-ipv6.csv.zip)
