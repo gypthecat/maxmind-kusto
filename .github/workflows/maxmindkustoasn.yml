@@ -34,5 +34,5 @@ jobs:
 
       # Generate Maxmind Kusto Tables
       - name: Run Generate Kusto Maxmind ASN
-        run: base generatekustomaxmind.sh $MAXMINDKEY
+        run: ./generatekustomaxmind.sh $MAXMINDKEY
           
