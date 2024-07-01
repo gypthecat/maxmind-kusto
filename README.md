@@ -12,11 +12,17 @@ Allows the ability to track IP addresses across service providers as well as inv
 
 # Perma Link
 [https://github.com/gypthecat/maxmind-kusto/releases/tag/daily-run](https://github.com/gypthecat/maxmind-kusto/releases/tag/daily-run)
+
 [https://github.com/gypthecat/maxmind-kusto/releases/download/daily-run/kusto-cidr-asn.csv.zip](https://github.com/gypthecat/maxmind-kusto/releases/download/daily-run/kusto-cidr-asn.csv.zip)
+
 [https://github.com/gypthecat/maxmind-kusto/releases/download/daily-run/kusto-cidr-asn.parquet](https://github.com/gypthecat/maxmind-kusto/releases/download/daily-run/kusto-cidr-asn.parquet)
+
 [https://github.com/gypthecat/maxmind-kusto/releases/download/daily-run/kusto-cidr-asn-ipv6.csv.zip](https://github.com/gypthecat/maxmind-kusto/releases/download/daily-run/kusto-cidr-asn-ipv6.csv.zip)
+
 [https://github.com/gypthecat/maxmind-kusto/releases/download/daily-run/kusto-cidr-asn-ipv6.parquet](https://github.com/gypthecat/maxmind-kusto/releases/download/daily-run/kusto-cidr-asn-ipv6.parquet)
+
 [https://github.com/gypthecat/maxmind-kusto/releases/download/daily-run/kusto-cidr-countries.csv.zip](https://github.com/gypthecat/maxmind-kusto/releases/download/daily-run/kusto-cidr-countries.csv.zip)
+
 [https://github.com/gypthecat/maxmind-kusto/releases/download/daily-run/kusto-cidr-countries.parquet](https://github.com/gypthecat/maxmind-kusto/releases/download/daily-run/kusto-cidr-countries.parquet)
 
 # Schema kusto-cidr-asn.csv.zip
