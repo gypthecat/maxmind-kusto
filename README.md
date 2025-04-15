@@ -79,7 +79,7 @@ externaldata (CIDRCountry:string, CIDR:string, CIDRCountryName:string, CIDRConti
 ```
 
 # I Want to Generate the Data Myself?
-Instructions coming soon.
+Instructions likely coming soon.
 
 # History
 This dataset is simultaneously hosted on https://firewalliplists.gypthecat.com.
