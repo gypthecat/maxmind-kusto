@@ -98,7 +98,7 @@ echo '
 .headers on
 .mode csv
 .output kusto-cidr-asn.csv
-SELECT CIDR, CIDRASN, CIDRASNName, "GeoLite2 by MaxMind" as CIDRSource FROM CIDRASNIPV4;
+SELECT CIDR, CIDRASN, CIDRASNName, "MaxMind" as CIDRSource FROM CIDRASNIPV4;
 ' | sqlite3 temp.db
 
 # Export kusto-cidr-asn-ipv6.csv
@@ -106,7 +106,7 @@ echo '
 .headers on
 .mode csv
 .output kusto-cidr-asn-ipv6.csv
-SELECT CIDR, CIDRASN, CIDRASNName, "GeoLite2 by MaxMind" as CIDRSource FROM CIDRASNIPV6;
+SELECT CIDR, CIDRASN, CIDRASNName, "MaxMind" as CIDRSource FROM CIDRASNIPV6;
 ' | sqlite3 temp.db
 
 # Compress the files
